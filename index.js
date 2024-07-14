@@ -3,7 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 const session = require("express-session");
 const bodyParser = require("body-parser");
-const productRoute = require("./routes/productRoute");
+const productRoute = require("./routes/productroute");
 const userroute = require("./routes/useroute");
 const authroute = require("./routes/authroute");
 const app = express();
