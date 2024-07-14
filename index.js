@@ -29,10 +29,10 @@ app.use(session({
    }),
    secret: process.env.SESS_SECRET,
    resave: false,
-   saveUninitialized: false,
+   saveUninitialized: true,
    cookie: {
       maxAge: 1000 * 60 * 60,
-      secure: false, // Set to false since your backend is not on HTTPS
+      secure: true, 
       httpOnly: true,
       sameSite: 'none'
    }
