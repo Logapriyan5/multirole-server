@@ -5,7 +5,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const productroute = require("./routes/productroute");
 const userroute = require("./routes/userroute");
-const authroute = require("./routes/authroute");
+const authRoute = require("./routes/authRoute");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 
 app.use(productroute);
 app.use(userroute);
-app.use(authroute);
+app.use(authRoute);
 
 app.listen(PORT, () => {
    console.log("Server is running...");
