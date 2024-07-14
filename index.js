@@ -3,8 +3,8 @@ require("dotenv").config();
 const cors = require("cors");
 const session = require("express-session");
 const bodyParser = require("body-parser");
-const productRoute = require("./routes/productroute");
-const userroute = require("./routes/useroute");
+const productroute = require("./routes/productroute");
+const userroute = require("./routes/userroute");
 const authroute = require("./routes/authroute");
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
    res.json("hello world");
 });
 
-app.use(productRoute);
+app.use(productroute);
 app.use(userroute);
 app.use(authroute);
 
