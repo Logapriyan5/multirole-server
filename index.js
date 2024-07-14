@@ -1,7 +1,7 @@
 const express = require("express");
+const session = require("express-session");
 require("dotenv").config();
 const cors = require("cors");
-const session = require("express-session");
 const bodyParser = require("body-parser");
 const productroute = require("./routes/productroute");
 const userroute = require("./routes/userroute");
@@ -29,7 +29,7 @@ app.use(session({
    }),
    secret: process.env.SESS_SECRET,
    resave: false,
-   saveUninitialized: true,
+   saveUninitialized: false,
    cookie: {
       maxAge: 1000 * 60 * 60,
       secure: true, 
